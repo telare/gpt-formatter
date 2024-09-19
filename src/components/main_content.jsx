@@ -1,8 +1,10 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 function Main() {
     const inputRef = useRef('')
     const alertRef = useRef('')
+    const bgRef = useRef(null)
+    const [currentTheme, themeChange] = useState('To dark theme')
     const regexp = new RegExp(/[\\/###**]/, 'g');
     const regexp2 = new RegExp(/([a-zA-Z])\1+/,'g')
     function input_edit() {
@@ -26,10 +28,19 @@ function Main() {
     function input_reset() {
         inputRef.current.value = '';
     }
+    function themeChange(){
+        
+    }
+    
+
     return (
-        <div className="bg-slate-200 min-h-screen flex flex-col justify-center">
+        <div className="bg-slate-200 min-h-screen flex flex-col justify-center" ref={bgRef}>
+            <div className=" min-w-screen h-6 flex justify-end mb-4 mr-5">
+                <button className="mr-3 bg-slate-300 rounded-md" onClick={themeChange}>{currentTheme}</button>
+  
+            </div>
             <div className="flex self-center">
-                <input type="text" name="" id="user_input" placeholder="paste here" className="rounded-xl border-black border-2 h-80 w-96 placeholder:top-1 placeholder:left-1  placeholder:absolute   autofocus" ref={inputRef}/>
+                <input type="text" name="" id="user_input" placeholder="paste here" className="rounded-xl border-black  border-2 h-80 w-96 placeholder:top-1 placeholder:left-1  placeholder:absolute   autofocus" ref={inputRef}/>
             </div>
             <div className="flex justify-center self-center my-5">
                 <button className="rounded-md border bg-black text-white mr-3 w-20" onClick={input_edit}>Format</button>

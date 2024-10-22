@@ -10,4 +10,4 @@ Here is an example of how to use it:
 1. Copy the code from a ChatGPT reply
 2. Paste the text in the left field
 3. Press "Format"
-4. Well done! The left field is a result of editing.
+4. Well done! The left field is a result of editing without ** or ###.

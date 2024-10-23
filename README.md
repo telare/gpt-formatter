@@ -1,4 +1,6 @@
 # GPT Formatter
+https://gpt-formatter.netlify.app
+
 This is a useful editor for code copied from ChatGPT.
 
 It is frustrating when you copy text from ChatGPT and paste it into your file, but it includes ** and ##
